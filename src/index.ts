@@ -59,3 +59,61 @@ const { url } = await startStandaloneServer(server, {
 })
 
 console.log("server ready at port localhost:" + port)
+
+
+/*
+queries of all games
+query {
+  games {
+    id
+    title
+    year
+    author {
+      id
+      name
+    }
+  }
+}
+
+query of specific games
+query {
+  game(id: "1") {
+    id
+    title
+    year
+    author {
+      id
+      name
+    }
+  }
+}
+
+add game mutation
+mutation {
+  addGame(game: {
+    title: "new game"
+    year: 2021
+    author_id: "1"
+  }) {
+    id
+    title
+    year
+  }
+}
+
+delete game mutation
+mutation {
+  deleteGame(id: "1")
+}
+
+update game mutation
+mutation {
+  updateGame(id: "1", game: {
+    title: "updated game"
+  }) {
+    id
+    title
+    year
+  }
+}
+*/
